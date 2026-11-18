@@ -292,7 +292,7 @@ linear-gradient(28deg,transparent 30%,rgba(255,255,255,.3) 48%,transparent 66%)}
 .lg2 .facts div{padding:20px 0}
 .lg2 .facts b{font:600 26px/1.25 var(--body);letter-spacing:0;margin-bottom:6px}
 .lg2 .facts span{font-size:18.5px;line-height:1.55;color:#4a4136}
-@media (max-width:900px){.lg2{grid-template-columns:1fr;gap:36px}.lh{font-size:64px}.lpf{max-width:320px}}
+@media (max-width:900px){.lg2{grid-template-columns:1fr;gap:36px}.lh{font-size:clamp(40px,11vw,64px)}.lh em{white-space:nowrap}.lpf{max-width:320px}}
 /* features: easier reading */
 .feat h3{font-weight:500}
 .feat .dek{font:400 21px/1.55 var(--body);color:#3f372d}
@@ -303,12 +303,24 @@ linear-gradient(28deg,transparent 30%,rgba(255,255,255,.3) 48%,transparent 66%)}
 html,body,a,button,label,summary,.vote span,.more,.cbtns a{cursor:url(cursor-flat.png) 3 3,auto;cursor:-webkit-image-set(url(cursor-flat.png) 1x,url(cursor-flat@2x.png) 2x) 3 3,auto}
 input,textarea{cursor:text}
 .feat h3{font-size:clamp(38px,3.5vw,50px);line-height:1.02;text-wrap:balance}
+/* care label tucked under the main label */
+.t2 .care{position:absolute;z-index:-1;top:15%;right:-21%;width:28%;padding:3.6cqw 1.8cqw 3cqw 8.4cqw;transform:rotate(4deg);transform-origin:left center;
+background:repeating-linear-gradient(90deg,rgba(94,84,70,.05) 0 1px,transparent 1px 2.5px),linear-gradient(100deg,#f2efe9 0%,#fdfcf9 38%,#ece8e0 62%,#faf8f3 100%);
+box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.3cqw}
+.t2 .care .c-h{font:700 1.5cqw var(--sans);letter-spacing:.3em;text-transform:uppercase}
+.t2 .care .c-ic{display:flex;gap:.7cqw}.t2 .care .c-ic svg{width:2.7cqw;height:2.7cqw;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round}
+.t2 .care ul{list-style:none;margin:0;padding:0;font:500 1.3cqw/1.7 var(--sans);letter-spacing:.03em;white-space:nowrap;text-transform:uppercase}
+.t2 .care .c-f{font:italic 400 1.7cqw var(--body);border-top:1px solid rgba(61,54,45,.3);padding-top:1cqw}
+@media (min-width:901px){.tag.t2{left:-5%}}
+@media (max-width:900px){.t2 .care{position:relative;top:auto;right:auto;width:62%;margin:-3cqw auto 0;padding:7cqw 4cqw 4cqw;transform:rotate(2deg);gap:2cqw}
+.t2 .care .c-h{font-size:2.8cqw}.t2 .care .c-ic svg{width:5cqw;height:5cqw}.t2 .care ul{font-size:2.6cqw}.t2 .care .c-f{font-size:3.2cqw}}
 </style></head><body id="top">
 <div class="strip"><a href="#top" class="wm"><img src="pinyon-1.svg" alt="Fan Zhang"></a><nav><a href="#letter">Editor’s letter</a><a href="#cv">The CV</a><a href="#features">Features</a><a href="#letters">Letters</a></nav><a class="lock" href="https://fan0729.github.io/classnotes/" title="Fan’s Personal Matters (private)">🔒 Personal matters</a></div>
 <header class="front4">
  <div class="satin"><div class="wrap">
   <div class="issue3 lt"><span>The Analytics Issue</span><span>Los Angeles</span></div>
-  <div class="tag t2"><div class="label"><svg class="stitch" aria-hidden="true"><rect/></svg>
+  <div class="tag t2"><div class="care" aria-label="Care label"><span class="c-h">Care</span><div class="c-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8 L5.2 19 H18.8 L21 8"/><path d="M3 8 C6 6 9 10 12 8 C15 6 18 10 21 8"/><text x="12" y="16.6" font-size="6" text-anchor="middle" stroke="none" fill="currentColor" font-family="DM Sans,sans-serif">30</text></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 L21 19 H3Z"/><path d="M6 6 L18 18 M18 6 L6 18"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><circle cx="12" cy="12" r="5"/><path d="M4 4 L20 20 M20 4 L4 20"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 18 H20.5 L19 11.5 C18.5 9.5 17 8.5 15 8.5 H8.5 M6 8.5 H11"/><circle cx="12" cy="14.5" r=".9" fill="currentColor"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><text x="12" y="14.6" font-size="7" text-anchor="middle" stroke="none" fill="currentColor" font-family="DM Sans,sans-serif">A</text></svg></div>
+     <ul><li>Feed with messy data</li><li>Handle with curiosity</li><li>Do not tumble dry</li><li>Available Summer 2027</li></ul><span class="c-f">100% Fan · Made in Qingdao</span></div><div class="label"><svg class="stitch" aria-hidden="true"><rect/></svg>
    <div class="panel">
     <span class="t-top">UCLA Anderson · MSBA ’27</span>
     <img class="t-name" src="pinyon-1.svg" alt="Fan Zhang">
@@ -395,7 +407,7 @@ input,textarea{cursor:text}
     <p class="dek">A free-shipping experiment on real H&amp;M orders, and the sample-ratio mismatch hiding inside it.</p>
     <div class="pull">“+4.9% was too good to be true. It was +2.9%.”</div>
     <p class="credits"><b>Credits</b>Python · Hypothesis testing · Simulation</p><a class="more" href="https://github.com/fan0729/ab-test-free-shipping-threshold" target="_blank" rel="noopener">Read on GitHub ↗</a></div></article>
-  <article class="feat"><figure class="fig"><div class="frame"><img src="img/landfall.jpg" alt="Landfall tariff planning screen"></div><figcaption><b>Fig. 2</b>Plan &amp; simulate: country tariff sliders and who to order from next.</figcaption></figure>
+  <article class="feat"><figure class="fig"><div class="frame"><img src="img/landfall.jpg?v=2" alt="Landfall tariff planning screen"></div><figcaption><b>Fig. 2</b>Plan &amp; simulate: country tariff sliders and who to order from next.</figcaption></figure>
     <div><span class="kick">Trade · Team project · MSBA Vibathon 2026</span><h3>Landfall, <em>or what tariffs really cost</em></h3>
     <p class="dek">A web app for small US importers: true landed cost, the cheapest supplier, and whether cash can carry the order. Fan built the tariff what-if screen.</p>
     <p class="credits"><b>Credits</b>TypeScript · React · Recharts · Vitest · Claude Code</p><a class="more" href="https://katytseng.github.io/msba-hackathon-2026/" target="_blank" rel="noopener">Live app ↗</a><a class="more" href="https://github.com/katytseng/msba-hackathon-2026" target="_blank" rel="noopener">GitHub ↗</a></div></article>
