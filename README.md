@@ -6,7 +6,8 @@ UCLA Anderson MSBA ’27. I turn messy data into decisions people actually use, 
 
 ## What’s on the site
 
-- **About:** four things about me
+- **Cover:** a lace clothing label with name, roles and “Made in Qingdao”, plus quick links
+- **Editor’s letter:** four things about me
 - **Projects:** A/B testing framework, Landfall (team hackathon app), a material handbook tool, and Fan’s Personal Matters
 - **Experience & education:** WTL Design, Los Angeles Apparel, USC research, UCLA Anderson and USC
 - **Résumé:** one-click PDF download
@@ -14,16 +15,18 @@ UCLA Anderson MSBA ’27. I turn messy data into decisions people actually use, 
 
 ## How it’s built
 
-A single static page with no build step: `index.html` with inline CSS, served by GitHub Pages from the `main` branch.
+A single static page styled like a magazine issue, with no build step: `index.html` with inline CSS, served by GitHub Pages from the `main` branch.
 
 | Path | What it is |
 |---|---|
 | `index.html` | The whole site |
-| `img/` | Photo, project images and organization logos |
+| `img/` | Project images, organization logos and the link-preview image (`og.jpg`) |
+| `lace.svg` | The lace label on the cover |
+| `pinyon-1.svg` | The script “Fan Zhang” wordmark |
 | `Fan_Zhang_Resume.pdf` | The résumé the download buttons serve |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | The FZ logo |
 
-Fonts: Fraunces, DM Sans and EB Garamond from Google Fonts. Light and dark mode follow the visitor’s system setting.
+Fonts: Bodoni Moda, EB Garamond and DM Sans from Google Fonts; the wordmark is Pinyon Script, saved as SVG paths.
 
 ## Updating
 
