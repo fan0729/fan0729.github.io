@@ -279,6 +279,20 @@ linear-gradient(28deg,transparent 30%,rgba(255,255,255,.3) 48%,transparent 66%)}
 /* deep velvet cover */
 .satin::before,.satin::after{display:none}
 .satin{box-shadow:none;background:radial-gradient(ellipse 70% 65% at 50% 42%,#3b5f40 0%,#26442b 55%,#17291b 100%)}
+.lh{font:400 64px/1 var(--didone);margin:14px 0 40px}.lh em{color:var(--forest)}
+.lg2{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.lph{margin:0 0 26px}.lpf{aspect-ratio:4/5;overflow:hidden;max-width:400px}
+.lpf img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;transform:scale(1.25);transform-origin:50% 48%;display:block}
+.lph figcaption{font:italic 400 15px var(--body);color:var(--soft);margin-top:10px}
+.lph figcaption b{font:700 10px var(--sans);letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:var(--ink);margin-right:8px}
+.lead4{font:400 22px/1.6 var(--body);color:var(--ink);margin:0 0 14px;max-width:34em}
+.byline4{font:italic 400 18px/1.5 var(--body);color:#4a4136;margin:0}
+.lg2 .sig img{height:54px;margin-top:22px}
+.lg2 .facts{border-left:0;padding-left:0;margin:30px 0 0;border-top:1px solid var(--ink)}
+.lg2 .facts div{padding:20px 0}
+.lg2 .facts b{font:600 26px/1.25 var(--body);letter-spacing:0;margin-bottom:6px}
+.lg2 .facts span{font-size:18.5px;line-height:1.55;color:#4a4136}
+@media (max-width:900px){.lg2{grid-template-columns:1fr;gap:36px}.lh{font-size:46px}.lpf{max-width:320px}}
 </style></head><body id="top">
 <div class="strip"><a href="#top" class="wm"><img src="pinyon-1.svg" alt="Fan Zhang"></a><nav><a href="#letter">Editor’s letter</a><a href="#cv">The CV</a><a href="#features">Features</a><a href="#letters">Letters</a></nav><a class="lock" href="https://fan0729.github.io/classnotes/" title="Fan’s Personal Matters (private)">🔒 Personal matters</a></div>
 <header class="front4">
@@ -311,18 +325,22 @@ linear-gradient(28deg,transparent 30%,rgba(255,255,255,.3) 48%,transparent 66%)}
   <div class="cbtns"><a href="#features">Projects →</a><a href="Fan_Zhang_Resume.pdf" download>Download résumé ↓</a><a href="https://www.linkedin.com/in/fan-zhang-analyst/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/fan0729" target="_blank" rel="noopener">GitHub ↗</a></div>
  </div></div>
  </header>
-<section id="letter"><div class="wrap letter2">
-  
-  <div class="ltext lgrid"><span class="kick">Editor’s letter</span><h2>Nice to <em>e-meet</em> you.</h2>
-    <p class="dc">Business analytics student with 1.5+ years of experience in <span class="nw">data → insights</span>, business reporting, pricing and product. Exploring building AI agents and automating processes with AI.</p>
-    <p class="byline3">Based in Los Angeles, open to relocation, fluent in English and Mandarin.</p>
+<section id="letter"><div class="wrap">
+  <span class="kick">Editor’s letter</span><h2 class="lh">Nice to <em>e-meet</em> you.</h2>
+  <div class="lg2">
+    <div class="lleft">
+      <figure class="lph"><div class="lpf"><img src="img/fan-sea.jpg" alt="Fan Zhang on a sea cliff by the ocean"></div><figcaption><b>Pictured</b>Somewhere by the sea.</figcaption></figure>
+      <div class="sig"><img src="pinyon-1.svg" alt="Fan Zhang"></div>
+    </div>
+    <div class="lright">
+      <p class="lead4">Business analytics student with 1.5+ years of experience in <span class="nw">data → insights</span>, business reporting, pricing and product. Exploring building AI agents and automating processes with AI.</p>
+      <p class="byline4">Based in Los Angeles, open to relocation, fluent in English and Mandarin.</p>
     <div class="facts">
     <div><b>Messy data, useful decisions</b><span>I turn messy data into decisions people actually use, and I’m always exploring what AI makes possible.</span></div>
     <div><b>Strategy × tech × finance</b><span>My favorite problems sit where strategy, technology and finance meet.</span></div>
     <div><b>An eye for aesthetics</b><span>Fashion, retail and anything beautifully made. Data is beautiful too.</span></div>
     <div><b>From Qingdao</b><span>Born and raised by the sea in Qingdao, China. Now in Los Angeles.</span></div>
-  </div>
-    <div class="sig"><img src="pinyon-1.svg" alt="Fan Zhang"></div>
+  </div></div>
   </div>
 </div></section>
 <section id="cv"><div class="wrap cv">
