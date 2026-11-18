@@ -6,7 +6,7 @@ UCLA Anderson MSBA ’27. I turn messy data into decisions people actually use, 
 
 ## What’s on the site
 
-- **Cover:** a lace clothing label with name, roles and “Made in Qingdao”, plus quick links
+- **Cover:** a sewn-in clothing label with name, roles and “Made in Qingdao”, plus quick links
 - **Editor’s letter:** four things about me
 - **Projects:** A/B testing framework, Landfall (team hackathon app), a material handbook tool, and Fan’s Personal Matters
 - **Experience & education:** WTL Design, Los Angeles Apparel, USC research, UCLA Anderson and USC
@@ -21,7 +21,7 @@ A single static page styled like a magazine issue, with no build step: `index.ht
 |---|---|
 | `index.html` | The whole site |
 | `img/` | Project images, organization logos and the link-preview image (`og.jpg`) |
-| `lace.svg` | The lace label on the cover |
+| `lace-trim.svg` | The lace edge on the cover label |
 | `pinyon-1.svg` | The script “Fan Zhang” wordmark |
 | `Fan_Zhang_Resume.pdf` | The résumé the download buttons serve |
 | `favicon.svg`, `favicon.png`, `apple-touch-icon.png` | The FZ logo |
