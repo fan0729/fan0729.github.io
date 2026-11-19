@@ -314,6 +314,20 @@ box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display
 @media (min-width:901px){.tag.t2{left:0}}
 @media (max-width:900px){.t2 .care{position:relative;top:auto;right:auto;width:62%;margin:-3cqw auto 0;padding:7cqw 4cqw 4cqw;transform:rotate(2deg);gap:2cqw}
 .t2 .care .c-h{font-size:2.8cqw}.t2 .care .c-ic svg{width:5cqw;height:5cqw}.t2 .care ul{font-size:2.6cqw}.t2 .care .c-f{font-size:3.2cqw}}
+/* rolling letter photos */
+.roll .lpf{position:relative}
+.roll .lpf img{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.roll .lpf img.on{opacity:1}
+.roll .lpf img.s1{object-position:50% 45%;transform:scale(1.25);transform-origin:50% 48%}
+.roll .lpf img.s2{object-position:52% 40%;transform:scale(1.4);transform-origin:52% 38%}
+.roll .lpf img.s4{object-position:50% 55%;transform:scale(1.2);transform-origin:50% 56%}
+.roll .lpf img.s3{object-position:50% 60%;transform:scale(1.35);transform-origin:50% 62%}
+.roll figcaption{display:flex;align-items:center;gap:0;max-width:400px}
+.rcap{flex:1;transition:opacity .4s}
+.rdots{display:flex;gap:8px;margin-left:12px}
+.rdots button{width:8px;height:8px;padding:0;border-radius:50%;border:1px solid var(--forest);background:transparent}
+.rdots button.on{background:var(--forest)}
+@media (prefers-reduced-motion:reduce){.roll .lpf img{transition:none}}
 </style></head><body id="top">
 <div class="strip"><a href="#top" class="wm"><img src="pinyon-1.svg" alt="Fan Zhang"></a><nav><a href="#letter">Editor’s letter</a><a href="#cv">The CV</a><a href="#features">Features</a><a href="#letters">Letters</a></nav><a class="lock" href="https://fan0729.github.io/classnotes/" title="Fan’s Personal Matters (private)">🔒 Personal matters</a></div>
 <header class="front4">
@@ -351,7 +365,12 @@ box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display
   <span class="kick">Editor’s letter</span><h2 class="lh">Nice to <em>e-meet</em> you.</h2>
   <div class="lg2">
     <div class="lleft">
-      <figure class="lph"><div class="lpf"><img src="img/fan-sea.jpg" alt="Fan Zhang on a sea cliff by the ocean"></div><figcaption><b>Pictured</b>Algarve, Portugal.</figcaption></figure>
+      <figure class="lph roll"><div class="lpf">
+        <img class="on s1" src="img/fan-sea.jpg" alt="Fan Zhang on a sea cliff by the ocean" data-cap="Algarve, Portugal.">
+        <img class="s2" src="img/fan.jpg" alt="Fan Zhang at the Getty Center in Los Angeles" data-cap="The Getty Center, Los Angeles." loading="lazy">
+        <img class="s3" src="img/fan-hall.jpg" alt="Fan Zhang in an arched hallway at the Royal Palace of Madrid" data-cap="Royal Palace of Madrid." loading="lazy">
+        <img class="s4" src="img/fan-bridge.jpg" alt="Fan Zhang under the Manhattan Bridge in Brooklyn" data-cap="Manhattan Bridge, Brooklyn." loading="lazy">
+      </div><figcaption><b>Pictured</b><span class="rcap">Algarve, Portugal.</span><span class="rdots" role="group" aria-label="Choose photo"><button type="button" class="on" aria-label="Photo 1"></button><button type="button" aria-label="Photo 2"></button><button type="button" aria-label="Photo 3"></button><button type="button" aria-label="Photo 4"></button></span></figcaption></figure>
       <div class="sig"><img src="pinyon-1.svg" alt="Fan Zhang"></div>
     </div>
     <div class="lright">
@@ -468,6 +487,19 @@ box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display
     .catch(function(){st.textContent='That didn’t send. Please email fanzzhang@g.ucla.edu instead.';})
     .then(function(){b.disabled=false;});
   });
+})();
+</script>
+<script>
+(function(){
+  var fig=document.querySelector('.roll');if(!fig)return;
+  var imgs=fig.querySelectorAll('.lpf img'),dots=fig.querySelectorAll('.rdots button'),cap=fig.querySelector('.rcap'),i=0,t;
+  function show(n){i=(n+imgs.length)%imgs.length;
+    for(var k=0;k<imgs.length;k++){imgs[k].classList.toggle('on',k===i);dots[k].classList.toggle('on',k===i);}
+    cap.textContent=imgs[i].getAttribute('data-cap')||'';}
+  function go(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(function(){show(i+1)},4200);}
+  for(var k=0;k<dots.length;k++)(function(k){dots[k].addEventListener('click',function(){show(k);go();});})(k);
+  fig.addEventListener('mouseenter',function(){clearInterval(t)});fig.addEventListener('mouseleave',go);
+  go();
 })();
 </script>
 </body></html>
