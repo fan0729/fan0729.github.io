@@ -328,6 +328,12 @@ box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display
 .rdots button{width:8px;height:8px;padding:0;border-radius:50%;border:1px solid var(--forest);background:transparent}
 .rdots button.on{background:var(--forest)}
 @media (prefers-reduced-motion:reduce){.roll .lpf img{transition:none}}
+/* credits as tool chips */
+div.credits{margin:18px 0 22px}
+div.credits b{display:block;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font:500 13.5px/1 var(--sans);letter-spacing:.02em;color:var(--forest);background:#e6ebdc;border:1px solid #cdd7bf;padding:8px 13px;border-radius:999px}
+.feat .dek strong{font-weight:600;color:var(--forest)}
 </style></head><body id="top">
 <div class="strip"><a href="#top" class="wm"><img src="pinyon-1.svg" alt="Fan Zhang"></a><nav><a href="#letter">Editor’s letter</a><a href="#cv">The CV</a><a href="#features">Features</a><a href="#letters">Letters</a></nav><a class="lock" href="https://fan0729.github.io/classnotes/" title="Fan’s Personal Matters (private)">🔒 Personal matters</a></div>
 <header class="front4">
@@ -425,11 +431,11 @@ box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display
     <div><span class="kick">Exclusive · Experimentation</span><h3>The test that caught <em>its own bug</em></h3>
     <p class="dek">A free-shipping experiment on real H&amp;M orders, and the sample-ratio mismatch hiding inside it.</p>
     <div class="pull">“+4.9% was too good to be true. It was +2.9%.”</div>
-    <p class="credits"><b>Credits</b>Python · Hypothesis testing · Simulation</p><a class="more" href="https://github.com/fan0729/ab-test-free-shipping-threshold" target="_blank" rel="noopener">Read on GitHub ↗</a></div></article>
+    <div class="credits"><b>Tech stack</b><div class="chips"><span>Python</span><span>Hypothesis testing</span><span>Simulation</span></div></div><a class="more" href="https://github.com/fan0729/ab-test-free-shipping-threshold" target="_blank" rel="noopener">Read on GitHub ↗</a></div></article>
   <article class="feat"><figure class="fig"><div class="frame"><img src="img/landfall.jpg?v=2" alt="Landfall tariff planning screen"></div><figcaption><b>Fig. 2</b>Plan &amp; simulate: country tariff sliders and who to order from next.</figcaption></figure>
     <div><span class="kick">Trade · Team project · MSBA Vibathon 2026</span><h3>Landfall, <em>or what tariffs really cost</em></h3>
-    <p class="dek">A web app for small US importers: true landed cost, the cheapest supplier, and whether cash can carry the order.</p>
-    <p class="credits"><b>Credits</b>TypeScript · React · Recharts · Vitest · Claude Code</p><a class="more" href="https://katytseng.github.io/msba-hackathon-2026/" target="_blank" rel="noopener">Live app ↗</a><a class="more" href="https://github.com/katytseng/msba-hackathon-2026" target="_blank" rel="noopener">GitHub ↗</a></div></article>
+    <p class="dek">A web app for small US importers: true landed cost, the cheapest supplier, and whether cash can carry the order. Designed to be <strong>user-friendly</strong>: one click on <strong>“Explain with AI”</strong> turns the numbers into a plain-English summary.</p>
+    <div class="credits"><b>Tech stack</b><div class="chips"><span>TypeScript</span><span>React</span><span>Recharts</span><span>Vitest</span><span>Claude API</span><span>Claude Code</span></div></div><a class="more" href="https://katytseng.github.io/msba-hackathon-2026/" target="_blank" rel="noopener">Live app ↗</a><a class="more" href="https://github.com/katytseng/msba-hackathon-2026" target="_blank" rel="noopener">GitHub ↗</a></div></article>
   <article class="feat"><figure class="fig"><div class="frame"><svg class='thumbsvg' role='img' aria-label='Handbook page with material swatches and a chart of active designers growing from 2 to 23' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'>
 <rect width='640' height='400' fill='#efe2d1'/>
 <rect x='28' y='34' width='316' height='336' rx='16' fill='#faf6ee' stroke='#e2d3bf'/>
@@ -449,11 +455,12 @@ box-shadow:0 8px 18px rgba(10,24,12,.35);color:#3d362d;text-align:center;display
     <div><span class="kick">Product · WTL Design</span><h3>The <em>handbook</em></h3>
     <p class="dek">From research to launch: designers pick materials, find inspiration and build the handbook in one step.</p>
     <div class="pull">“Prep time, down 40%.”</div>
-    <p class="credits"><b>Credits</b>SQL · Python · Claude Code</p></div></article>
+    <div class="credits"><b>Tech stack</b><div class="chips"><span>SQL</span><span>Python</span><span>Claude Code</span></div></div></div></article>
   <article class="feat"><figure class="fig"><div class="frame"><img src="img/app.jpg" alt="Fan’s Personal Matters dashboard"></div><figcaption><b>Fig. 4</b>The internship tracker, with demo data.</figcaption></figure>
     <div><span class="kick">Self-made</span><h3>Personal <em>matters</em></h3>
-    <p class="dek">A notes, deadlines, internship-tracker and journal app that syncs across devices through GitHub.</p>
-    <p class="credits"><b>Credits</b>JavaScript · HTML/CSS · GitHub API · IndexedDB · Claude Code</p><a class="more" href="https://fan0729.github.io/classnotes/">🔒 Open (private)</a></div></article>
+    <p class="dek">A notes, deadlines, internship-tracker and journal app that syncs across devices through GitHub. Paste a job link or the whole job description, and it fills in the <strong>company, role, location, industry, pay and deadline</strong> on its own.</p>
+    <div class="pull">“Paste the whole JD. It fills in the rest.”</div>
+    <div class="credits"><b>Tech stack</b><div class="chips"><span>JavaScript</span><span>HTML/CSS</span><span>GitHub API</span><span>IndexedDB</span><span>Claude Code</span></div></div><a class="more" href="https://fan0729.github.io/classnotes/">🔒 Open (private)</a></div></article>
 </div></section>
 
 <section id="letters" class="contact"><div class="wrap">
